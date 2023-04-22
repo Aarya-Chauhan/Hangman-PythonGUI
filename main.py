@@ -6,7 +6,7 @@ import random
 pygame.init()
 WIDTH, HEIGHT = 900, 750
 win = pygame.display.set_mode((WIDTH, HEIGHT))
-pygame.display.set_caption("Hangman Game")
+pygame.display.set_caption("Hangman")
 
 # button variables
 radius = 20
@@ -49,7 +49,7 @@ TITLE_FONTS = pygame.font.SysFont('comicsans', 70)
 def draw():
     win.fill(BLUE)
     # draw title
-    text = TITLE_FONTS.render("HANGMAN GAME", 1, BLACK)
+    text = TITLE_FONTS.render("HANGMAN", 1, BLACK)
     win.blit(text, (WIDTH/2 - text.get_width()/2, 20))
     # draw word
     display_word = ""
@@ -112,7 +112,7 @@ while run:
             won = False
             break
     if won:
-        display_message("Wohooo...!! You Won!")
+        display_message("yippie!!! You Won!")
         break
     if hangman_status == 6:
         display_message(f"Oopss..!! \nIt was {word} You Lost!")
